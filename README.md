@@ -63,7 +63,7 @@ roslaunch sfa3d_ros 3d_lidar_object_detection.launch INPUT_TOPIC:=/velodyne_poin
 rosbag play 2019-03-01-velodyne_imu_usb_cam_eng8-2-outdoor.bag
 ```
 
-![](sfa3d_ros/media/sfa3d_ros_eng8-2.gif)
+![demo](media/sfa3d_ros_eng8-2.gif)
 
 
 
