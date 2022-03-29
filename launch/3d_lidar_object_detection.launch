@@ -1,0 +1,15 @@
+<launch>
+  <arg name="nodename" default="sfa3d_object_detector"/>
+  <arg name="headless" default="false"/>
+  <arg name="INPUT_TOPIC"/>
+
+
+  <node name="$(arg nodename)"
+        pkg="sfa3d_ros" type="sfa3d_ros_wrapper.py"
+        output="screen" respawn="true">
+    <remap from="~input" to="$(arg INPUT_TOPIC)" />
+  </node>
+
+  <!-- rviz -->
+  <node name="$(anon rviz)" pkg="rviz" type="rviz" args="-d $(find sfa3d_ros)/config/rviz_config" respawn="true" unless="$(arg headless)"/>
+</launch>
